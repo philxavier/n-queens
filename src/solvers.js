@@ -32,11 +32,11 @@ window.findNRooksSolution = function(n) {
         board.togglePiece(i, j);
   
         if (!board.hasAnyRooksConflicts()) {
-          recursiveRooks(inputBoard)
+          recursiveRooks(inputBoard);
         }
       }   
     }
-  }
+  };
   recursiveRooks(board);
 
   // [1,0,0,0]
@@ -45,12 +45,12 @@ window.findNRooksSolution = function(n) {
   // [0,0,0,0]
   
   //loop through board
-      //togglePiece
-      //check if there are any conflicts through findAnyRooks helper function
-      //if there are conflicts, 
-        //untoggle
-      //if there aren't any conflicts && counter < n, keep looping through AND add 1 to a counter
-      //if counter == n, return board
+  //togglePiece
+  //check if there are any conflicts through findAnyRooks helper function
+  //if there are conflicts, 
+  //untoggle
+  //if there aren't any conflicts && counter < n, keep looping through AND add 1 to a counter
+  //if counter == n, return board
 
   // },
 
