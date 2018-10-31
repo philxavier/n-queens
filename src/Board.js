@@ -79,7 +79,7 @@
     //
     // test if a specific row on this board contains a conflict
 
-    
+
 
     hasRowConflictAt: function(rowIndex) {
       var currentRow = this.rows()[rowIndex];
@@ -113,8 +113,8 @@
     //
     // test if a specific column on this board contains a conflict
 
-   
-    
+
+
     hasColConflictAt: function(colIndex) {
       var board = this.rows();
       var counter = 0;
@@ -145,7 +145,7 @@
     //
     // test if a specific major diagonal on this board contains a conflict
 
-    
+
 
     hasMajorDiagonalConflictAt: function(majorDiagonalColumnIndexAtFirstRow) {
       var board = this.rows();
@@ -157,21 +157,14 @@
             var row = board[diagonalRow];
             if (row[nextIndex] === 1) {
               return true;
-            } 
+            }
             diagonalRow++;
             nextIndex++;
           }
         }
-      }  
-      return false;      
+      }
+      return false;
     },
-
-    //[0,0,0,0]
-    //[0,0,1,0] 
-    //[1,0,0,1]
-    //[0,0,1,0]
-    
-    
 
     // test if any major diagonals on this board contain conflicts
     hasAnyMajorDiagonalConflicts: function() {
@@ -191,17 +184,6 @@
     //
     // test if a specific minor diagonal on this board contains a conflict
 
-<<<<<<< HEAD
-    
-
-    //[1,0,0,0]
-    //[0,0,1,0]
-    //[0,1,0,0]
-    //[0,0,0,0]
-=======
-  
->>>>>>> 7191c46ee07a2527b1fd0e840827c05e883719c2
-
     hasMinorDiagonalConflictAt: function(minorDiagonalColumnIndexAtFirstRow) {
       var board = this.rows();
       for (let i = 0; i < board.length; i++) {
@@ -212,19 +194,14 @@
             var row = board[diagonalRow];
             if (row[nextIndex] === 1) {
               return true;
-            } 
+            }
             diagonalRow++;
             nextIndex--;
           }
         }
-      }  
-      return false;    
+      }
+      return false;
     },
-
-    //[0,1,0,0]
-    //[0,0,0,1] 
-    //[1,0,0,0]
-    //[0,0,1,0]
 
     // test if any minor diagonals on this board contain conflicts
     hasAnyMinorDiagonalConflicts: function() {
@@ -252,23 +229,3 @@
 
 }());
 
-
-
-
-
-// var board = this.rows();
-// for (let i = 0; i < board.length; i++) {
-//   if (board[i][minorDiagonalColumnIndexAtFirstRow] === 1) {
-//     var diagonalRow = i + 1;
-//     var nextIndex = minorDiagonalColumnIndexAtFirstRow - 1;
-//     while (diagonalRow < board.length) {
-//       var row = board[diagonalRow];
-//       if (row[nextIndex] === 1) {
-//         return true;
-//       } 
-//       diagonalRow++;
-//       nextIndex--;
-//     }
-//   }
-// }  
-// return false;    
